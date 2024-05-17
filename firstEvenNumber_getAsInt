@@ -1,0 +1,18 @@
+import java.util.OptionalInt;
+import java.util.stream.IntStream;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        
+        // Find the first even number in the array
+        OptionalInt firstEven = IntStream.of(numbers)
+                                         .filter(n -> n % 2 == 0)
+                                         .findFirst();
+        
+        // Retrieve the first even number as an int
+        int firstEvenValue = firstEven.getAsInt();
+        System.out.println("First even number: " + firstEvenValue);
+    }
+}
+//First even number: 2
